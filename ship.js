@@ -13,6 +13,10 @@ function Ship(game, x, y) {
     this.body.allowRotation = false;
     game.add.existing(this);
 
+    this.collide = function() {
+        this.kill();
+    };
+
 }
 Ship.prototype.update = function() {
     var mX = game.input.mousePointer.x;
