@@ -49,6 +49,9 @@ function update() {
     enemies.forEach(function(enemy) {
         enemy.angle++;
     });
+
+
+    game.physics.arcade.overlap(ship, enemies, collisionHandler, null, this);
 }
 function render() {
 
